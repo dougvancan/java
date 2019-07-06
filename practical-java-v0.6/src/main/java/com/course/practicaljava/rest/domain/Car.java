@@ -2,10 +2,6 @@ package com.course.practicaljava.rest.domain;
 
 public class Car {
 
-	public Car() {
-		super();
-	}
-
 	private String brand;
 	private String color;
 	private String type;

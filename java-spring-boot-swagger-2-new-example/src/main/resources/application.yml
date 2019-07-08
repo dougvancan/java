@@ -1,0 +1,12 @@
+server:
+  port: 8001
+  
+spring:
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+    
+management:
+  metrics:
+    export:
+      elastic:
+        step: 30s

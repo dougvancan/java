@@ -1,0 +1,595 @@
+{
+	"info": {
+		"_postman_id": "cb14cdb6-93ee-4b45-9623-8c10c02747dc",
+		"name": "Practical Java",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hello World",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/welcome",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"welcome"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Server Time",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/time",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"time"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Random Car",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/car/v1/random",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"car",
+						"v1",
+						"random"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Echo Car",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"brand\" : \"Mitsubishi\",\n\t\"type\" : \"Sedan\",\n\t\"color\" : \"Blue\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/car/v1/echo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"car",
+						"v1",
+						"echo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Random Cars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/car/v1/random-cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"car",
+						"v1",
+						"random-cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ES - Count of Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9200/practical-java/_count",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"practical-java",
+						"_count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ES - Save Data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"brand\": \"Ferarri\",\n    \"color\": \"Red\",\n    \"type\": \"Coupe\",\n    \"price\": 6673,\n    \"available\": true,\n    \"id\": null,\n    \"first_release_date\": \"2011-10-02T00:00:00.000+0700\",\n    \"additional_features\": [\n        \"GPS\"\n    ],\n    \"fuel_type\": \"Hybrid\",\n    \"horse_power\": 200,\n    \"serial_number\": null,\n    \"compatible_tires\": [\n        {\n            \"manufacturer\": \"Dunlop\",\n            \"diameter\": 17\n        },\n        {\n            \"manufacturer\": \"Goodyear\",\n            \"diameter\": 17\n        },\n        {\n            \"manufacturer\": \"Goodyear\",\n            \"diameter\": 15\n        }\n    ],\n    \"secret_feature\": \"Can fly\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9200/practical-java/car",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"practical-java",
+						"car"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ES - Query by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9200/practical-java/car/78pppmYBHzLSsrMpXkhS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"practical-java",
+						"car",
+						"78pppmYBHzLSsrMpXkhS"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ES - Update Data",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"brand\": \"Ferarri\",\n    \"color\": \"Blue\",\n    \"type\": \"Coupe\",\n    \"price\": 8604,\n    \"available\": false,\n    \"id\": null,\n    \"first_release_date\": \"2018-06-27T00:00:00.000+0700\",\n    \"fuel_type\": \"Electric\",\n    \"horse_power\": 135,\n    \"serial_number\": null,\n    \"compatible_tires\": [\n        {\n            \"manufacturer\": \"Dunlop\",\n            \"diameter\": 16\n        },\n        {\n            \"manufacturer\": \"Dunlop\",\n            \"diameter\": 17\n        },\n        {\n            \"manufacturer\": \"Bridgestone\",\n            \"diameter\": 15\n        }\n    ],\n    \"secret_feature\": \"Can fly\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9200/practical-java/car/78pppmYBHzLSsrMpXkhS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"practical-java",
+						"car",
+						"78pppmYBHzLSsrMpXkhS"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ES - Query by Brand and Color",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"query\": {\r\n        \"bool\": {\r\n            \"must\": [\r\n                {\r\n                    \"match\": {\r\n                        \"brand\": \"toyota\"\r\n                    }\r\n                },\r\n                {\r\n                    \"match\": {\r\n                        \"color\": \"red\"\r\n                    }\r\n                }\r\n            ]\r\n        }\r\n    },\r\n    \"size\" : 3,\r\n    \"from\" : 0\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9200/practical-java/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"practical-java",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Spring - Count of Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/car/v1/cars/count",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"car",
+						"v1",
+						"cars",
+						"count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Spring - Save Data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"brand\": \"Lamborghini\",\n    \"color\": \"Yellow\",\n    \"type\": \"MPV\",\n    \"price\": 11118,\n    \"available\": true,\n    \"id\": null,\n    \"first_release_date\": \"2016-10-22T00:00:00.000+0700\",\n    \"additional_features\": [\n        \"GPS\"\n    ],\n    \"fuel_type\": \"Electric\",\n    \"horse_power\": 198,\n    \"serial_number\": null,\n    \"compatible_tires\": [\n        {\n            \"manufacturer\": \"Goodyear\",\n            \"diameter\": 17\n        },\n        {\n            \"manufacturer\": \"Dunlop\",\n            \"diameter\": 17\n        },\n        {\n            \"manufacturer\": \"Goodyear\",\n            \"diameter\": 15\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/car/v1/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"car",
+						"v1",
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Spring - Query By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/car/v1/cars/DKLUsGYB39HPSr3Uzaff",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"car",
+						"v1",
+						"cars",
+						"DKLUsGYB39HPSr3Uzaff"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Spring - Query by Brand and Color",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/car/v1/cars/toyota/red",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"car",
+						"v1",
+						"cars",
+						"toyota",
+						"red"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Spring - Query by Brand and Color 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/car/v1/cars?brand=ford&color=pink",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"car",
+						"v1",
+						"cars"
+					],
+					"query": [
+						{
+							"key": "brand",
+							"value": "ford"
+						},
+						{
+							"key": "color",
+							"value": "pink"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Spring - Query by Date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/car/v1/cars/date?first_release_date=2018-01-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"car",
+						"v1",
+						"cars",
+						"date"
+					],
+					"query": [
+						{
+							"key": "first_release_date",
+							"value": "2018-01-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Spring - Query with Pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/car/v1/cars/toyota/white?page=1&size=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"car",
+						"v1",
+						"cars",
+						"toyota",
+						"white"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Spring - Header by Annotation",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Practical-java",
+						"value": "Java is good",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/header-one",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"header-one"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Spring - Header by Servlet",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Practical-java",
+						"type": "text",
+						"value": "Java is good"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/header-two",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"header-two"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Spring - Header All",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Practical-java",
+						"type": "text",
+						"value": "Java is good"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/header-two",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"header-two"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
